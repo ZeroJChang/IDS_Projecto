@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verde y Aprende - Recicla Fácil en Guatemala</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Verde y Aprende</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chatbot">Chatbot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#leyes">Leyes de Reciclaje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#colores">Colores del Reciclaje</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container-fluid text-center bg-light p-5">
+        <h1 class="display-4">Verde y Aprende</h1>
+        <p class="lead">Fomenta hábitos de reciclaje en Guatemala. Aprende cómo reciclar, consulta preguntas frecuentes y resuelve tus dudas con nuestro chatbot.</p>
+    </div>
+
+    <!-- Introducción -->
+    <div class="container mt-5">
+        <h2>¿Qué es el reciclaje?</h2>
+        <p>El reciclaje es el proceso de recolectar, separar y transformar residuos en nuevos productos o materias primas, evitando que estos terminen en vertederos o incinerados. En Guatemala, el reciclaje es fundamental para reducir la contaminación ambiental y promover el desarrollo sostenible.</p>
+    </div>
+
+    <!-- Preguntas Frecuentes -->
+    <div id="faq" class="container mt-5">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Cómo separar los residuos?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Los residuos deben separarse en diferentes categorías: orgánicos, reciclables como plástico, vidrio, papel, y otros desechos como electrónicos.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Dónde puedo reciclar en Guatemala?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Existen puntos de reciclaje en diferentes ciudades, además de organizaciones como Reciclemos por Guatemala que tienen programas de recolección.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="container mt-5">
+        <h2>Chatbot de Reciclaje</h2>
+        <p>Interactúa con nuestro chatbot para resolver tus dudas sobre reciclaje en Guatemala.</p>
+        <div class="text-center">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#chatModal">Abrir Chatbot</button>
+        </div>
+    </div>
+
+    <!-- Modal para el Chatbot -->
+    <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="chatModalLabel">Chatbot de Reciclaje</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Interfaz simulada del chat -->
+                    <div class="mb-3">
+                        <div class="p-3 bg-light rounded mb-2">Bot: ¡Hola! ¿En qué puedo ayudarte hoy sobre reciclaje?</div>
+                        <div id="chatContent"></div>
+                        <input type="text" id="userMessage" class="form-control mt-3" placeholder="Escribe tu mensaje...">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="sendMessage()">Enviar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leyes de Reciclaje -->
+    <div id="leyes" class="container mt-5">
+        <h2>Leyes de Reciclaje en Guatemala</h2>
+        <p>En Guatemala, existen leyes importantes que regulan el manejo de residuos y fomentan el reciclaje:</p>
+        <ul>
+            <li><strong>Ley para la Gestión Integral de Residuos Sólidos (Decreto 68-2016)</strong>: Promueve la separación de residuos en origen.</li>
+            <li><strong>Acuerdo Gubernativo 164-2020</strong>: Elimina los plásticos de un solo uso, promoviendo el uso de materiales reciclables.</li>
+        </ul>
+    </div>
+
+    <!-- Colores del Reciclaje -->
+    <div id="colores" class="container mt-5">
+        <h2>Colores del Reciclaje</h2>
+        <p>Los colores de los contenedores de reciclaje son clave para identificar el tipo de residuos que deben depositarse en cada uno:</p>
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>Color</th>
+                    <th>Significado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: green;"><strong>Verde</strong></td>
+                    <td>Vidrio</td>
+                </tr>
+                <tr>
+                    <td style="color: yellow;"><strong>Amarillo</strong></td>
+                    <td>Plásticos y envases metálicos</td>
+                </tr>
+                <tr>
+                    <td style="color: blue;"><strong>Azul</strong></td>
+                    <td>Papel y cartón</td>
+                </tr>
+                <tr>
+                    <td style="color: brown;"><strong>Marrón</strong></td>
+                    <td>Residuos orgánicos</td>
+                </tr>
+                <tr>
+                    <td style="color: gray;"><strong>Gris</strong></td>
+                    <td>Desechos no reciclables</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="text-center mt-4">
+    <button class="btn btn-success" onclick="window.location.href='Noticias.html';">Mira las nuevas del reciclaje en Guatemala</button>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="bg-success text-white text-center p-3 mt-5">
+        <p>© 2024 Verde y Aprende - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para manejar el chatbot -->
+    <script>
+        function sendMessage() {
+            var message = document.getElementById('userMessage').value;
+            if(message) {
+                var chatContent = document.getElementById('chatContent');
+                chatContent.innerHTML += '<div class="p-3 bg-secondary text-white rounded mb-2">Tú: ' + message + '</div>';
+                document.getElementById('userMessage').value = '';
+                setTimeout(function() {
+                    alert('Actualmente no está el servicio disponible');
+                }, 500);
+            }
+        }
+    </script>
+
+</body>
+</html>
